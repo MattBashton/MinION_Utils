@@ -94,7 +94,7 @@ done
 
 # Run jobs via GNU parallel
 tput bold
-echo "\nRunning jobs via GNU parallel over $CPU cores\n"
+echo -ne "\nRunning jobs via GNU parallel over $CPU cores\n"
 tput sgr0
 LOG_F=$(basename $JL_FILE .txt)
 parallel --progress --jobs $CPU --joblog $LOG_F.log < $JL_FILE
