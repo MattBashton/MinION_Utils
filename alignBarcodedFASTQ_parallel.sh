@@ -98,4 +98,6 @@ echo "\nRunning jobs via GNU parallel over $CPU cores\n"
 tput sgr0
 LOG_F=$(basename $JL_FILE .txt)
 parallel --progress --jobs $CPU --joblog $LOG_F.log < $JL_FILE
-echo "\nDone!\n - Run logged to $LOG_F.log"
+tput bold
+echo -ne "\nDone!\n - Run logged to $LOG_F.log"
+tput sgr0
