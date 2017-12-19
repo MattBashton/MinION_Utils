@@ -99,5 +99,5 @@ tput sgr0
 LOG_F=$(basename $JL_FILE .txt)
 parallel --progress --jobs $CPU --joblog $LOG_F.log < $JL_FILE
 tput bold
-echo -ne "\nDone!\n - Run logged to $LOG_F.log"
+echo -ne "\nDone! - Run logged to $LOG_F.log\n"
 tput sgr0
